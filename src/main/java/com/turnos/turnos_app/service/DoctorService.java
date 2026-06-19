@@ -1,4 +1,4 @@
-package com.turnos.service;
+package com.turnos.turnos_app.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.turnos.EstadoRegistro;
-import com.turnos.model.Doctor;
-import com.turnos.repository.DoctorRepository;
+import com.turnos.turnos_app.model.Doctor;
+import com.turnos.turnos_app.repository.DoctorRepository;
 
 @Service
 public class DoctorService {

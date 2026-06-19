@@ -1,4 +1,4 @@
-package com.turnos.model;
+package com.turnos.turnos_app.model;
 
 import java.time.LocalDateTime;
 

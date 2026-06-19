@@ -1,4 +1,4 @@
-package com.turnos.converter;
+package com.turnos.turnos_app.converter;
 
 import com.turnos.EstadoRegistro;
 

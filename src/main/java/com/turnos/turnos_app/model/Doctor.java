@@ -1,4 +1,4 @@
-package com.turnos.model;
+package com.turnos.turnos_app.model;
 
 import java.time.LocalDateTime;
 
@@ -28,6 +28,5 @@ public class Doctor {
     private String nombre;
     private LocalDateTime fechaIngreso;
 
-    @Enumerated(EnumType.ORDINAL)
     private EstadoRegistro estado;
 }
