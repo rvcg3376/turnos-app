@@ -25,7 +25,7 @@ public class DoctorController {
     // crear doctor
     @PostMapping
     public Doctor crear(@RequestBody Doctor entity) {
-        // TODO: process POST request
+        // TODO: process POST request e
 
         return doctorService.guardar(entity);
     }
