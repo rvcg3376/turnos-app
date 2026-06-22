@@ -2,7 +2,6 @@ package com.turnos.turnos_app.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.turnos.EstadoRegistro;
@@ -12,8 +11,11 @@ import com.turnos.turnos_app.repository.DoctorRepository;
 @Service
 public class DoctorService {
 
-    @Autowired
-    private DoctorRepository doctorRepository;
+    private final DoctorRepository doctorRepository;
+
+    DoctorService(DoctorRepository doctorRepository) {
+        this.doctorRepository = doctorRepository;
+    }
 
     public Doctor guardar(Doctor d){
         d.setEstado(EstadoRegistro.ACTIVO);
@@ -30,9 +32,11 @@ public class DoctorService {
         return doctorRepository.save(d);
     }
 
-    public Doctor finalizar(Long id){
-        Doctor d = doctorRepository.findById(id).orElseThrow();
-        d.setEstado(EstadoRegistro.FINALIZADO);
-        return doctorRepository.save(d);
+        public Doctor actualizar( Doctor d){
+        Doctor dx = doctorRepository.findById(d.getId()).orElseThrow();
+        dx.setNombre(d.getNombre());
+        dx.setIdentificacion(d.getIdentificacion());
+        return doctorRepository.save(dx);
     }
+
 }

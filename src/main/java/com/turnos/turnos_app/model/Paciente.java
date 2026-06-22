@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import com.turnos.EstadoRegistro;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,7 +24,9 @@ public class Paciente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
+    private String identificacion;
+    @Column(insertable = false, updatable = false)
     private LocalDateTime fechaIngreso;
     // ACTIVO, ANULADO, FINALIZADO
     private EstadoRegistro estado;
-}
+} 
